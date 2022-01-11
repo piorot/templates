@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Template } from './infrastructure/template';
+import { TemplatesService } from './infrastructure/templates.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cobiro';
+  templates$: Observable<Template[]>;
+
+  constructor(private templateService: TemplatesService){
+    this.templates$ = this.templateService.getTemplates();
+  }
 }

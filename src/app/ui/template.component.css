@@ -1,0 +1,12 @@
+.template{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 40px;
+    min-height: 100px;
+
+}
+
+.template-preview{
+    max-height: 90px;
+}
